@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Home from "./page";
 // import { QueryProvider } from "next-graphql-react"; // by using this we dont have to create a seperate component for QueryProvider just import it from the package(npm i next-graphql-react)and wrap the children in it .
 import QueryProvider from "@/components/QueryProvider";
 import Navbar from "@/components/navbar"; 
@@ -36,7 +35,6 @@ export default function RootLayout({
       >
 
          <QueryProvider>
-          {/* Navbar is now included in the layout */}
           <div className="sticky top-0 z-50 bg-white shadow-md text-black text-center">
             <Navbar />
           </div>
@@ -44,10 +42,6 @@ export default function RootLayout({
             {children}
           </div>
         </QueryProvider>
-         {/* <QueryProvider>
-          <Navbar/>
-          {children}
-          </QueryProvider> */}
 
       </body>
     </html>
